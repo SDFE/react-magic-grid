@@ -23,6 +23,7 @@ const MagicGridWrapper = ({ children, ...props }) => {
     if (!grid) {
       grid = new MagicGrid({ container: container.current, ...props })
       window.addEventListener("resize", resize)
+      resize()
     }
 
     grid.positionItems()
